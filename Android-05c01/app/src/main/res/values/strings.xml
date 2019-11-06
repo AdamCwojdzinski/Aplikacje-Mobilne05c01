@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android-05c01</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my_web">MyWebActivity</string>
+    <string name="protected_activity_permission_label_string">Uprawnienie do wykorzystywania aktywności MyWebActivity</string>
+    <string name="protected_activity_permission_desc_string">Uprawnienie wykorzystywane podczas wyświetlania informacji ze strony jankiewicz.pl/studenci w ramach aktywności MyWebActivity</string>
+
+</resources>

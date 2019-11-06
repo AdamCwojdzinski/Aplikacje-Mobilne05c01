@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kjankiewicz.android_05c01" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <permission android:name="com.example.kjankiewicz.android_05c01.MYWEBVIEW_PERMISSION"
+        android:description="@string/protected_activity_permission_desc_string"
+        android:label="@string/protected_activity_permission_label_string">
+    </permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/oak"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MyCalcActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.kjankiewicz.android_05c01.CALC" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyWebActivity"
+            android:label="@string/title_activity_my_web"
+            android:permission="com.example.kjankiewicz.android_05c01.MYWEBVIEW_PERMISSION">
+            <!-- DONE: Zdefiniuj filtr intencji pozwalający wykorzystywać aktywność do otwierania
+                 stron internetowych o adresie URL zawierającym schemat "http" i
+                 nazwę hosta "jankiewicz.pl" i ścieżki rozpoczynającej się od ciągu "studenci" -->
+            <intent-filter>
+                <action android:name="com.example.kjankiewicz.android_05c01.PROTECTED_ACTION"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="jankiewicz.pl"
+                    android:pathPattern="/studenci/..*" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
