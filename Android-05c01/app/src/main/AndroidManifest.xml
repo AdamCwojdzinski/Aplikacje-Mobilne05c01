@@ -34,12 +34,11 @@
                  stron internetowych o adresie URL zawierającym schemat "http" i
                  nazwę hosta "jankiewicz.pl" i ścieżki rozpoczynającej się od ciągu "studenci" -->
             <intent-filter>
-                <action android:name="com.example.kjankiewicz.android_05c01.PROTECTED_ACTION"/>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
-                    android:scheme="https"
+                    android:scheme="http"
                     android:host="jankiewicz.pl"
                     android:pathPattern="/studenci/..*" />
             </intent-filter>
